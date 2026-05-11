@@ -49,12 +49,10 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                       children: [
                         CircleAvatar(
                           radius: 32,
-                          backgroundColor: const Color(0xFFEEF2FF),
-                          child: const Icon(
-                            Icons.person,
-                            color: Color(0xFF2563EB),
-                            size: 36,
+                          backgroundImage: const AssetImage(
+                            'assets/animal1.jpg',
                           ),
+                          backgroundColor: const Color(0xFFEEF2FF),
                         ),
                         const SizedBox(width: 14),
                         Expanded(

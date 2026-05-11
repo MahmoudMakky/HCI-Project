@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hci_project/screens/home_screen.dart';
 import 'add_project.dart';
 
 class GraduationDetailsScreen extends StatefulWidget {
@@ -217,9 +218,10 @@ class _GraduationDetailsScreenState extends State<GraduationDetailsScreen> {
               const SizedBox(height: 16),
               Center(
                 child: GestureDetector(
-                  onTap: () => Navigator.push(
+                  onTap: () => Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (_) => const AddProjectScreen()),
+                    MaterialPageRoute(builder: (_) => const HomeScreen()),
+                    (route) => false,
                   ),
                   child: const Text(
                     'Skip For Now',

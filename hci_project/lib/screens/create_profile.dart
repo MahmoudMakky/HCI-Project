@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'setup_profile.dart';
+import 'home_screen.dart';
 
 class CreateProfileScreen extends StatelessWidget {
   const CreateProfileScreen({super.key});
@@ -92,11 +93,10 @@ class CreateProfileScreen extends StatelessWidget {
               const Spacer(),
               Center(
                 child: GestureDetector(
-                  onTap: () => Navigator.push(
+                  onTap: () => Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(
-                      builder: (_) => const SetupProfileScreen(),
-                    ),
+                    MaterialPageRoute(builder: (_) => const HomeScreen()),
+                    (route) => false,
                   ),
                   child: const Text(
                     'Skip For Now',
